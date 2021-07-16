@@ -1,0 +1,116 @@
+/* -------------- App --------------- */
+
+.componentToPrint_App {
+    display: none;
+}
+
+/* -------------- Header -------------------- */
+
+span {
+    font-size: 12px;
+}
+
+.header {
+    margin: 20px 20px;
+}
+
+.logoDiv_Header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.patientBioDiv_Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.patientDetails_Header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.patientDetailsRow_Header {
+    margin-bottom: 2px
+}
+
+.patientDetailsKey_Header {
+    min-width: 20px;
+}
+
+/* ---------------- Footer ------------------- */
+
+.footer {
+    margin: 20px 20px;
+}
+
+.logoDiv_Footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoDivDetails_Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footerNote_Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footerNote_Footer span {
+    margin-bottom: 2px
+}
+
+/* ---------------- PatientData ------------------ */
+
+.table_PatientData {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.tableHeader_PatientData {
+    background-color: #92bbd1;
+}
+
+.tableHeader_PatientData th {
+    padding: 15px;
+}
+
+tbody tr td{
+    text-align: left;
+    padding: 5px 0;
+}
+
+/* -------------- Component to Print -------------- */
+
+.printStyle_Print {
+    overflow: scroll;
+    
+}
+
+.pageStyle_Print {
+    height: 100vh;
+    width: 100vw;
+}
+
+.tablediv_Print {
+    min-height: calc(100vh - 620px);
+    margin: 20px 20px;
+}
+
+/* ---------------- Button --------------------- */
+
+.styles_Button {
+    margin: 20px 0;
+    padding: 10px 20px;
+}
