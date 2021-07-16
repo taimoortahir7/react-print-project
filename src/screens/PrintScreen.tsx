@@ -64,7 +64,7 @@ export class ComponentToPrint extends React.Component<MyProps & any> {
           <div className='pageStyle_Print' ref={this.props.ref}>
             <Header data={this.props.reportHeader} />
             <div className='tablediv_Print'>
-              <PatientData itemData={item} />
+              <PatientData itemData={item} reportTitle={this.props.reportTitle}/>
             </div>
             <Footer data={this.props.reportFooter} /> 
           </div>

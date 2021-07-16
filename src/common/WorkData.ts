@@ -37,6 +37,7 @@ type reportHeaderType = {
     styles: any
 }
 
+export const reportDataTitle: string = "COMPLETE BLOOD PICTURE REPORT"
 
 export const workOrderData: workOrderDataType = [
     {
@@ -191,8 +192,14 @@ export const reportHeader: reportHeaderType = {
     sid: "400631",
     sampleType: "Blood Serum",
     styles: {
-        main: { 
-            margin: '20px 20px' 
+        main: {
+            width: '100%'
+        },
+        mainDivItem: {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            width: '33%'
         },
         logo: {
             display: 'flex',
@@ -201,10 +208,33 @@ export const reportHeader: reportHeaderType = {
             justifyContent: 'flex-end',
             marginBottom: '20px'
         },
+        rowHeader: {
+            margin: '5px 0px',
+            width: '100%'
+        },
+        label: {
+            border: '1px solid',
+            backgroundColor: '#bb4040',
+            color: 'white',
+            padding: '5px 10px',
+            minWidth: '100px',
+            textAlign: 'center'
+        },
+        labelRow: {
+            display: 'flex',
+            width: '100%'
+        },
+        labelText: {
+            border: '1px solid',
+            padding: '5px 10px',
+            textAlign: 'center',
+            width: '100%'
+        },
         bio: {
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
+            margin: '0px 20px'
         }
     }
 }

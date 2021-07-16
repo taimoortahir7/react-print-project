@@ -19,13 +19,16 @@ type workOrderDataType = {
 }
 
 type MyProps = {
-    itemData: workOrderDataType
+    itemData: workOrderDataType,
+    reportTitle: string
 };
 
 export const PatientData = (props: MyProps) => {
 
     return (
-        <table className='table_PatientData'>
+        <>
+            <h3>{props.reportTitle}</h3>
+            <table className='table_PatientData'>
             <thead className='tableHeader_PatientData'>
                 <th scope="row" colSpan={4}>{props.itemData?.printTitle}</th>
             </thead>
@@ -55,6 +58,7 @@ export const PatientData = (props: MyProps) => {
                     ))
                 }
             </tbody>
-        </table>
+            </table>
+        </>
     );
 }

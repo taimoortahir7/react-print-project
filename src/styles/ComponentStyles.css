@@ -35,7 +35,15 @@ span {
 }
 
 .patientDetailsRow_Header {
-    margin-bottom: 2px
+    margin: 10px
+}
+
+.label_Header {
+    border: 1px solid;
+    background-color: #bb4040;
+    color: white;
+    /* padding: 5px 10px; */
+    width: 500px
 }
 
 .patientDetailsKey_Header {

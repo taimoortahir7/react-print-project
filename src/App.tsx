@@ -5,6 +5,7 @@ import './styles/ComponentStyles.css'
 import { getWorkOrderData } from './utils/WorkDataFunc'
 import { reportFooter } from './common/WorkData'
 import { reportHeader } from './common/WorkData'
+import { reportDataTitle } from './common/WorkData'
 
 import { PrintButton } from './components/Button'
 import { ComponentToPrint } from './screens/PrintScreen'
@@ -36,6 +37,7 @@ export const App = () => {
   const [workData, setWorkData] = useState<any>([])
   const [headerData, setHeaderData] = useState<reportHeaderType>(reportHeader)
   const [footerData, setFooterData] = useState<reportFooterType>(reportFooter)
+  const [reportTitle, setReportTitle] = useState<string>(reportDataTitle)
 
   const handleOnBeforeGetContent = () => {
     setWorkData(getWorkOrderData())
@@ -69,7 +71,7 @@ export const App = () => {
       /> */}
       <PrintButton onClick={handlePrint}/>
       <div className='componentToPrint_App'>
-        <ComponentToPrint reportHeader={headerData} reportData={workData} reportFooter={footerData} ref={componentRef} />
+        <ComponentToPrint reportTitle={reportTitle} reportHeader={headerData} reportData={workData} reportFooter={footerData} ref={componentRef} />
       </div>
     </div>
   );

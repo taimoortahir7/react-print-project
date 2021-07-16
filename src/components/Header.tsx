@@ -26,7 +26,7 @@ export const Header = (props: MyProps & any) => {
         value: '1234567890128',
         options: {
           background: '#f7f7f7',
-          height: 60,
+          height: 40,
           format: 'EAN13'
         }
     });
@@ -37,41 +37,71 @@ export const Header = (props: MyProps & any) => {
                 <img src={logo} alt='logo'/>
             </div>
             <div style={props.data?.styles?.bio}>
-                <div className='patientDetails_Header'>
-                    <span className='patientDetailsRow_Header'>
-                        <span>{props.data?.patientFullName}</span>
+                <div style={props.data?.styles?.mainDivItem}>
+                    <span style={props.data?.styles?.rowHeader}>
+                        <span style={props.data?.styles?.labelRow}>
+                            <div style={props.data?.styles?.label}>PATIENT'S NAME</div>
+                            <div style={props.data?.styles?.labelText}>{props.data?.patientFullName}</div>
+                        </span>
                     </span>
-                    <span className='patientDetailsRow_Header'>
-                        <span>Age: {props.data?.ageNgender}</span>
+                    <span style={props.data?.styles?.rowHeader}>
+                        <span style={props.data?.styles?.labelRow}>
+                            <div style={props.data?.styles?.label}>AGE</div>
+                            <div style={props.data?.styles?.labelText}>{props.data?.ageNgender}</div>
+                        </span>
                     </span>
                     <img ref={inputRef} />
                 </div>
-                <div className='patientDetails_Header'>
-                    <span className='patientDetailsRow_Header'>
-                        <span>Lab Code: {props.data?.workOrderID}</span>
+                <div style={props.data?.styles?.mainDivItem}>
+                    <span style={props.data?.styles?.rowHeader}>
+                        <span style={props.data?.styles?.labelRow}>
+                            <div style={props.data?.styles?.label}>LAB CODE</div>
+                            <div style={props.data?.styles?.labelText}>{props.data?.workOrderID}</div>
+                        </span>
                     </span>
-                    <span className='patientDetailsRow_Header'>
-                        <span>Ref Doctor: {props.data?.referenceDoctor}</span>
+                    <span style={props.data?.styles?.rowHeader}>
+                        <span style={props.data?.styles?.labelRow}>
+                            <div style={props.data?.styles?.label}>REF DOCTOR</div>
+                            <div style={props.data?.styles?.labelText}>{props.data?.referenceDoctor}</div>
+                        </span>
                     </span>
-                    <span className='patientDetailsRow_Header'>
-                        <span>Customer: {props.data?.customer}</span>
+                    <span style={props.data?.styles?.rowHeader}>
+                        <span style={props.data?.styles?.labelRow}>
+                            <div style={props.data?.styles?.label}>CUSTOMER</div>
+                            <div style={props.data?.styles?.labelText}>{props.data?.customer}</div>
+                        </span>
                     </span>
                 </div>
-                <div className='patientDetails_Header'>
-                    <span className='patientDetailsRow_Header'>
-                        <span>Sample Type: {props.data?.sampleType}</span>
+                <div style={props.data?.styles?.mainDivItem}>
+                    <span style={props.data?.styles?.rowHeader}>
+                        <span style={props.data?.styles?.labelRow}>
+                            <div style={props.data?.styles?.label}>SAMPLE TYPE</div>
+                            <div style={props.data?.styles?.labelText}>{props.data?.sampleType}</div>
+                        </span>
                     </span>
-                    <span className='patientDetailsRow_Header'>
-                        <span>SID: {props.data?.sid}</span>
+                    <span style={props.data?.styles?.rowHeader}>
+                        <span style={props.data?.styles?.labelRow}>
+                            <div style={props.data?.styles?.label}>SID</div>
+                            <div style={props.data?.styles?.labelText}>{props.data?.sid}</div>
+                        </span>
                     </span>
-                    <span className='patientDetailsRow_Header'>
-                        <span>Collected On: {moment(props.data?.collectedOnTime).format('YYYY-MM-DD hh:mm')}</span>
+                    <span style={props.data?.styles?.rowHeader}>
+                        <span style={props.data?.styles?.labelRow}>
+                            <div style={props.data?.styles?.label}>COLLECTED ON</div>
+                            <div style={props.data?.styles?.labelText}>{moment(props.data?.collectedOnTime).format('YYYY-MM-DD hh:mm')}</div>
+                        </span>
                     </span>
-                    <span className='patientDetailsRow_Header'>
-                        <span>Regd On: {moment(props.data?.registrationTime).format('YYYY-MM-DD hh:mm')}</span>
+                    <span style={props.data?.styles?.rowHeader}>
+                        <span style={props.data?.styles?.labelRow}>
+                            <div style={props.data?.styles?.label}>REGD ON</div>
+                            <div style={props.data?.styles?.labelText}>{moment(props.data?.registrationTime).format('YYYY-MM-DD hh:mm')}</div>
+                        </span>
                     </span>
-                    <span className='patientDetailsRow_Header'>
-                        <span>Reported On: {moment(props.data?.reportedTime).format('YYYY-MM-DD hh:mm')}</span>
+                    <span style={props.data?.styles?.rowHeader}>
+                        <span style={props.data?.styles?.labelRow}>
+                            <div style={props.data?.styles?.label}>REPORTED ON</div>
+                            <div style={props.data?.styles?.labelText}>{moment(props.data?.reportedTime).format('YYYY-MM-DD hh:mm')}</div>
+                        </span>
                     </span>
                 </div>
             </div>
