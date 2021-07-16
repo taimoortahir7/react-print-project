@@ -15,7 +15,8 @@ type workOrderDataType = {
         range: string[],
         type: string,
         units: string 
-    }[]
+    }[],
+    styles: any
 }
 
 type MyProps = {
@@ -27,8 +28,55 @@ export const PatientData = (props: MyProps) => {
 
     return (
         <>
-            <h3>{props.reportTitle}</h3>
-            <table className='table_PatientData'>
+            <h3 style={props.itemData?.styles?.reportTitle}>{props.reportTitle}</h3>
+            <span style={props.itemData?.styles?.rowHeader}>
+                <span style={props.itemData?.styles?.labelRow}>
+                    <div style={props.itemData?.styles?.label}>TEST</div>
+                    <div style={props.itemData?.styles?.labelText}>{props.itemData?.printTitle}</div>
+                </span>
+                <span style={props.itemData?.styles?.labelRow}>
+                    <div style={props.itemData?.styles?.label}>DESCRIPTION</div>
+                    {
+                        props.itemData?.printLines.map((printItem: any, index: number) => (
+                            <div style={props.itemData?.styles?.labelText}>{printItem?.description}</div>
+                        ))
+                    }
+                </span>
+                <span style={props.itemData?.styles?.labelRow}>
+                    <div style={props.itemData?.styles?.label}>RESULTS</div>
+                    {
+                        props.itemData?.printLines.map((printItem: any, index: number) => (
+                            <div style={props.itemData?.styles?.labelText}>{printItem?.result}</div>
+                        ))
+                    }
+                </span>
+                <span style={props.itemData?.styles?.labelRow}>
+                    <div style={props.itemData?.styles?.label}>UNITS</div>
+                    {
+                        props.itemData?.printLines.map((printItem: any, index: number) => {
+                            if (printItem?.units) return (
+                                <div style={props.itemData?.styles?.labelText}>{printItem?.units}</div>
+                            )
+                        })
+                    }
+                </span>
+                {
+                    props.itemData?.printLines.map((printItem: any, index: number) => {
+                        if (printItem?.units) return (
+                            <span style={props.itemData?.styles?.labelRow}>
+                                <div style={props.itemData?.styles?.label}>BIOLOGICAL REFERENCE RANGES</div>
+                                {
+                                    (printItem?.range) && (printItem?.range.map((item: string, index: number) => (
+                                        <div style={props.itemData?.styles?.labelText}>{item}</div>
+                                    )))
+                                }
+                            </span>
+                        )
+                    })
+                }
+            </span>
+
+            {/* <table className='table_PatientData'>
             <thead className='tableHeader_PatientData'>
                 <th scope="row" colSpan={4}>{props.itemData?.printTitle}</th>
             </thead>
@@ -58,7 +106,7 @@ export const PatientData = (props: MyProps) => {
                     ))
                 }
             </tbody>
-            </table>
+            </table> */}
         </>
     );
 }

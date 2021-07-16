@@ -13,7 +13,8 @@ type workOrderDataType = {
         range: string[],
         type: string,
         units: string 
-    }[]
+    }[],
+    styles: any
 }[]
 type reportFooterType = {
     FooterNotes1: string,
@@ -55,9 +56,36 @@ export const workOrderData: workOrderDataType = [
                 result: "Trophozoite seen",
                 range: [""],
                 type: "",
-                units: ""
+                units: "1"
             }
-        ]
+        ],
+        styles: {
+            rowHeader: {
+                margin: '5px 0px',
+                width: '100%'
+            },
+            label: {
+                border: '1px solid',
+                backgroundColor: '#bb4040',
+                color: 'white',
+                padding: '5px 10px',
+                minWidth: '100px',
+                textAlign: 'center'
+            },
+            labelRow: {
+                display: 'flex',
+                width: '100%'
+            },
+            labelText: {
+                border: '1px solid',
+                padding: '5px 10px',
+                textAlign: 'center',
+                width: '100%'
+            },
+            reportTitle: {
+                textAlign: 'center'
+            }
+        }
     },
     {
         testId: "KMRSHLSER03", 
@@ -86,7 +114,34 @@ export const workOrderData: workOrderDataType = [
                 type: "radio",
                 units: ""
             }
-        ]
+        ],
+        styles: {
+            rowHeader: {
+                margin: '5px 0px',
+                width: '100%'
+            },
+            label: {
+                border: '1px solid',
+                backgroundColor: '#bb4040',
+                color: 'white',
+                padding: '5px 10px',
+                minWidth: '100px',
+                textAlign: 'center'
+            },
+            labelRow: {
+                display: 'flex',
+                width: '100%'
+            },
+            labelText: {
+                border: '1px solid',
+                padding: '5px 10px',
+                textAlign: 'center',
+                width: '100%'
+            },
+            reportTitle: {
+                textAlign: 'center'
+            }
+        }
     },
     {
         testId: "KMRSHLSER05", 
@@ -105,7 +160,34 @@ export const workOrderData: workOrderDataType = [
                 type: "multiString",
                 units: ""
             }
-        ]
+        ],
+        styles: {
+            rowHeader: {
+                margin: '5px 0px',
+                width: '100%'
+            },
+            label: {
+                border: '1px solid',
+                backgroundColor: '#bb4040',
+                color: 'white',
+                padding: '5px 10px',
+                minWidth: '100px',
+                textAlign: 'center'
+            },
+            labelRow: {
+                display: 'flex',
+                width: '100%'
+            },
+            labelText: {
+                border: '1px solid',
+                padding: '5px 10px',
+                textAlign: 'center',
+                width: '100%'
+            },
+            reportTitle: {
+                textAlign: 'center'
+            }
+        }
     },{
         testId: "KMRSHLSER07", 
         testName: "V.D.R.L Test", 
@@ -144,6 +226,33 @@ export const workOrderData: workOrderDataType = [
                 units: ""
             }
         ],
+        styles: {
+            rowHeader: {
+                margin: '5px 0px',
+                width: '100%'
+            },
+            label: {
+                border: '1px solid',
+                backgroundColor: '#bb4040',
+                color: 'white',
+                padding: '5px 10px',
+                minWidth: '100px',
+                textAlign: 'center'
+            },
+            labelRow: {
+                display: 'flex',
+                width: '100%'
+            },
+            labelText: {
+                border: '1px solid',
+                padding: '5px 10px',
+                textAlign: 'center',
+                width: '100%'
+            },
+            reportTitle: {
+                textAlign: 'center'
+            }
+        }
     },
     {
         testId: "KMRSHLSER11", 
@@ -177,6 +286,33 @@ export const workOrderData: workOrderDataType = [
                 units: "",
             }
         ],
+        styles: {
+            rowHeader: {
+                margin: '5px 0px',
+                width: '100%'
+            },
+            label: {
+                border: '1px solid',
+                backgroundColor: '#bb4040',
+                color: 'white',
+                padding: '5px 10px',
+                minWidth: '100px',
+                textAlign: 'center'
+            },
+            labelRow: {
+                display: 'flex',
+                width: '100%'
+            },
+            labelText: {
+                border: '1px solid',
+                padding: '5px 10px',
+                textAlign: 'center',
+                width: '100%'
+            },
+            reportTitle: {
+                textAlign: 'center'
+            }
+        }
     }
 ]
 
@@ -209,7 +345,7 @@ export const reportHeader: reportHeaderType = {
             marginBottom: '20px'
         },
         rowHeader: {
-            margin: '5px 0px',
+            // margin: '5px 0px',
             width: '100%'
         },
         label: {

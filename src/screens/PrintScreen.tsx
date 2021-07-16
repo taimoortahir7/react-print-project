@@ -41,7 +41,8 @@ type workOrderDataType = {
       range: string[],
       type: string,
       units: string 
-  }[]
+  }[],
+  styles: any
 }
 
 type MyProps = {
