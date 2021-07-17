@@ -84,12 +84,28 @@ export const Header = (props: MyProps & any) => {
             }
             {
                 (props.userType === 'user2') && (
-                    <span style={props.data?.styles?.rowHeader}>
-                        <span style={props.data?.styles?.labelRow}>
-                            <div style={props.data?.styles?.label}>PATIENT'S NAME</div>
-                            <div style={props.data?.styles?.labelText}>{props.data?.patientFullName}</div>
+                    <>
+                        <span className='patientDetailsRow_Header'>
+                            <span className='labelRow_Header'>
+                                <div className='label_Header'>PATIENT'S NAME</div>
+                                <div className='labelText_Header'>{props.data?.patientFullName}</div>
+                            </span>
+                            <span className='labelRow_Header'>
+                                <div className='label_Header'>PATIENT'S NAME</div>
+                                <div className='labelText_Header'>{props.data?.patientFullName}</div>
+                            </span>
                         </span>
-                    </span>
+                        <span className='patientDetailsRow_Header'>
+                            <span className='labelRow_Header'>
+                                <div className='label_Header'>PATIENT'S NAME</div>
+                                <div className='labelText_Header'>{props.data?.patientFullName}</div>
+                            </span>
+                            <span className='labelRow_Header'>
+                                <div className='label_Header'>PATIENT'S NAME</div>
+                                <div className='labelText_Header'>{props.data?.patientFullName}</div>
+                            </span>
+                        </span>
+                    </>
                 )
             }
         </div>
