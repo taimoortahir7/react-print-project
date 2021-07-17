@@ -33,8 +33,7 @@ type reportHeaderType = {
     collectedOnTime: string,
     reportedTime: string,
     sid: string,
-    sampleType: string,
-    styles: any
+    sampleType: string
 }
 
 
@@ -189,24 +188,7 @@ export const reportHeader: reportHeaderType = {
     collectedOnTime: "Sun June 06 2021 06:20:50 GMT+0100 (Irish Standard Time)",
     reportedTime: "Mon June 07 2021 12:04:50 GMT+0100 (Irish Standard Time)",
     sid: "400631",
-    sampleType: "Blood Serum",
-    styles: {
-        main: { 
-            margin: '20px 20px' 
-        },
-        logo: {
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'flex-end',
-            marginBottom: '20px'
-        },
-        bio: {
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between'
-        }
-    }
+    sampleType: "Blood Serum"
 }
 
 export const reportFooter: reportFooterType = {

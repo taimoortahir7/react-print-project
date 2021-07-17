@@ -49,6 +49,7 @@ type MyProps = {
   reportData: any;
   reportFooter: reportFooterType;
   ref: React.RefObject<HTMLInputElement>;
+  userType: string
 };
 
 export class ComponentToPrint extends React.Component<MyProps & any> {
@@ -62,7 +63,7 @@ export class ComponentToPrint extends React.Component<MyProps & any> {
       {
         this.props.reportData.map((item: workOrderDataType, index: number) => (
           <div className='pageStyle_Print' ref={this.props.ref}>
-            <Header data={this.props.reportHeader} />
+            <Header data={this.props.reportHeader} userType={this.props.userType}/>
             <div className='tablediv_Print'>
               <PatientData itemData={item} />
             </div>

@@ -114,3 +114,18 @@ tbody tr td{
     margin: 20px 0;
     padding: 10px 20px;
 }
+
+.mainDiv_Button {
+    width: 300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selectionDiv_Button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 190px;
+}

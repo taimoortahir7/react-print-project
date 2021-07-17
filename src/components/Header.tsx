@@ -19,6 +19,7 @@ type reportHeaderType = {
 
 type MyProps = {
     props: reportHeaderType;
+    userType: string
 };
 
 export const Header = (props: MyProps & any) => {
@@ -31,12 +32,14 @@ export const Header = (props: MyProps & any) => {
         }
     });
 
+    console.log('userType: ', props.userType)
+
     return (
-        <div style={props.data?.styles?.main}>
-            <div style={props.data?.styles?.logo}>
+        <div className='header'>
+            <div className='logoDiv_Header'>
                 <img src={logo} alt='logo'/>
             </div>
-            <div style={props.data?.styles?.bio}>
+            <div className='patientBioDiv_Header'>
                 <div className='patientDetails_Header'>
                     <span className='patientDetailsRow_Header'>
                         <span>{props.data?.patientFullName}</span>

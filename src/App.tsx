@@ -33,6 +33,7 @@ type reportHeaderType = {
 
 export const App = () => {
   const componentRef = useRef(null);
+  const [userType, setUserType] = useState<any>()
   const [workData, setWorkData] = useState<any>([])
   const [headerData, setHeaderData] = useState<reportHeaderType>(reportHeader)
   const [footerData, setFooterData] = useState<reportFooterType>(reportFooter)
@@ -55,6 +56,10 @@ export const App = () => {
     onAfterPrint: handleAfterPrint
   });
 
+  const selectedUserCallback = (value: any) => {
+    setUserType(value)
+  }
+
   useEffect(() => {
     handleOnBeforeGetContent()
   }, [])
@@ -67,9 +72,9 @@ export const App = () => {
         documentTitle="PatientFile"
         removeAfterPrint
       /> */}
-      <PrintButton onClick={handlePrint}/>
+      <PrintButton onClick={handlePrint} selectedUserCallback={selectedUserCallback}/>
       <div className='componentToPrint_App'>
-        <ComponentToPrint reportHeader={headerData} reportData={workData} reportFooter={footerData} ref={componentRef} />
+        <ComponentToPrint reportHeader={headerData} reportData={workData} reportFooter={footerData} ref={componentRef} userType={userType}/>
       </div>
     </div>
   );
