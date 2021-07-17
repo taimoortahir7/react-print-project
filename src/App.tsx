@@ -33,7 +33,7 @@ type reportHeaderType = {
 
 export const App = () => {
   const componentRef = useRef(null);
-  const [userType, setUserType] = useState<any>()
+  const [userType, setUserType] = useState<any>('user1')
   const [workData, setWorkData] = useState<any>([])
   const [headerData, setHeaderData] = useState<reportHeaderType>(reportHeader)
   const [footerData, setFooterData] = useState<reportFooterType>(reportFooter)
