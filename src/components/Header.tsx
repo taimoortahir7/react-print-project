@@ -84,28 +84,36 @@ export const Header = (props: MyProps & any) => {
             }
             {
                 (props.userType === 'user2') && (
-                    <>
+                    <div className='mainbio_header'>
                         <span className='patientDetailsRow_Header'>
                             <span className='labelRow_Header'>
                                 <div className='label_Header'>PATIENT'S NAME</div>
                                 <div className='labelText_Header'>{props.data?.patientFullName}</div>
                             </span>
                             <span className='labelRow_Header'>
-                                <div className='label_Header'>PATIENT'S NAME</div>
+                                <div className='label_Header'>I.O.NO.</div>
+                                <div className='labelText_Header'>{props.data?.patientFullName}</div>
+                            </span>
+                            <span className='labelRow_Header'>
+                                <div className='label_Header'>REFERENCED BY</div>
                                 <div className='labelText_Header'>{props.data?.patientFullName}</div>
                             </span>
                         </span>
                         <span className='patientDetailsRow_Header'>
                             <span className='labelRow_Header'>
-                                <div className='label_Header'>PATIENT'S NAME</div>
+                                <div className='label_Header'>SEX</div>
                                 <div className='labelText_Header'>{props.data?.patientFullName}</div>
                             </span>
                             <span className='labelRow_Header'>
-                                <div className='label_Header'>PATIENT'S NAME</div>
+                                <div className='label_Header'>AGE</div>
+                                <div className='labelText_Header'>{props.data?.patientFullName}</div>
+                            </span>
+                            <span className='labelRow_Header'>
+                                <div className='label_Header'>DATE</div>
                                 <div className='labelText_Header'>{props.data?.patientFullName}</div>
                             </span>
                         </span>
-                    </>
+                    </div>
                 )
             }
         </div>
